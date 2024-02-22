@@ -4,6 +4,12 @@ set(LLVM_MOS_PLATFORM rp6502)
 find_package(llvm-mos-sdk REQUIRED)
 project(MY-RP6502-PROJECT)
 
+add_executable(ascii)
+rp6502_executable(ascii)
+target_sources(ascii PRIVATE
+    src/ascii.c
+)
+
 add_executable(xmastree)
 rp6502_executable(xmastree)
 target_sources(xmastree PRIVATE
