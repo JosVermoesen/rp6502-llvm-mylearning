@@ -3,6 +3,13 @@ add_subdirectory(tools)
 set(LLVM_MOS_PLATFORM rp6502)
 find_package(llvm-mos-sdk REQUIRED)
 project(MY-RP6502-PROJECT)
+
+add_executable(xmastree)
+rp6502_executable(xmastree)
+target_sources(xmastree PRIVATE
+    src/xmastree.c
+)
+
 add_executable(hello)
 rp6502_executable(hello)
 target_sources(hello PRIVATE
