@@ -22,8 +22,8 @@ const int white = 7;
 void clear()
 {
 #ifdef IS_RP6502
-    // puts("\30\f"); // rp6502 and others
-    printf("\f"); // form feed
+    puts("\30\f"); // rp6502 and others
+    // printf("\f"); // form feed
 #else
     printf("\e[1;1H\e[2J"); // DOS/WINDOWS
 #endif
