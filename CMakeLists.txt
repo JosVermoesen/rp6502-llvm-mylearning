@@ -10,6 +10,12 @@ target_sources(ascii PRIVATE
     src/ascii.c
 )
 
+add_executable(searchandsort)
+rp6502_executable(searchandsort)
+target_sources(searchandsort PRIVATE
+    src/searchandsort.c
+)
+
 add_executable(xmastree)
 rp6502_executable(xmastree)
 target_sources(xmastree PRIVATE
